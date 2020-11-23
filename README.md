@@ -22,7 +22,7 @@ Labeler lambda function that calls AWS Rekognition on the queued files
 
 
 ## Design
-![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/pipeline%20diagram.png)
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/pipeline%20diagram.png)
 
 ## Setup
 Follow these instructions to set up the pipeline on your own
