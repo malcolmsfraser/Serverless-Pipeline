@@ -33,6 +33,9 @@ Labeler lambda function that calls AWS Rekognition on the queued files
 
 #### Step 2: Producer Lambda Initialize an new Lambda Function
 Name your lambda whatever you want
+
 Runtime: Python 3.6
+
 Function Trigger: None
+
 IAM Role: Select your created IAM Role
