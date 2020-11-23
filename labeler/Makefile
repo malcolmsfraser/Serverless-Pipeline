@@ -6,4 +6,6 @@ install:
 	pip install --upgrade pip
 		pip install -r requirements.txt
 		
-	
+all:	
+	make install_packages
+	make install
