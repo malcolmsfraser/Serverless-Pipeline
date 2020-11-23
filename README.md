@@ -28,12 +28,15 @@ Follow these instructions to set this up on your own
 ### Create an IAM Role
 
 ### Create an SQS Queue
-**if you use another name you will need to update the name in the Producer lambda source code**
+**Note: if you use another name you will need to update the name in the Producer lambda source code**
+
 Name: producer
 
 ### Create an S3 Bucket
-**if you use another name you will need to update the name in the Producer lambda & Labeler lambda source code**
-Name:unprocessed-bucket
+**Note: if you use another name or region you will need to update the name in the Producer lambda & Labeler lambda source code**
+
+Name: unprocessed-bucket
+region: us-east-1
 
 ### Setting up the serverless functions with AWS Lambda
 
