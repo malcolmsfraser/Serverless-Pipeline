@@ -123,9 +123,13 @@ From the AWS Lambda console, select the appropriate lambda function and setup tr
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/Lambda2.png)
 
 #### For the producer lambda setup an S3 trigger
+Trigger should be listening to the S3 bucket you created earlier
+
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaProdTrigger.png)
 
 #### For the labeler lambda setup an SQS trigger
+Trigger should be listening to the SQS trigger you created earlier
+
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaLabTrigger.png)
 
 The pipeline setup is now complete!
