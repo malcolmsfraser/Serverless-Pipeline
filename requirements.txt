@@ -2,3 +2,4 @@ click
 pandas
 boto3
 tqdm
+pylint

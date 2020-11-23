@@ -7,19 +7,19 @@ from tqdm import tqdm
 def s3_client_connection():
     c = boto3.client('s3')
     return c
+    
+def s3_resource_connection():
+    r = boto3.resource('s3')
+    return r
 
 
 def send_to_s3(file,bucket):
     """Sends file to s3 bucket"""
     
-    client = s3_client_connection()
     
     print(f"Uploading file: {file} to bucket: {bucket}.")
-    response = client.put_object(
-        Body=file,
-        Bucket=bucket,
-        Key=file,
-        )
+    s3 = s3_resource_connection()
+    s3.meta.client.upload_file(file, bucket, file)
     print("Upload complete.")
     return None
 
@@ -44,10 +44,10 @@ def get_results(file,bucket):
 def cool_stuff(file, bucket):
     send_to_s3(file,bucket)
     print('Analyzing image')
-    for i in tqdm(range(10)):
-        time.sleep(.7)
+    for i in tqdm(range(12)):
+        time.sleep(i+1-i)
     info = get_results(file,bucket)
-    print(f"Filename:\n{info['Image'][0]}:\n\nLabels detected:\n{info['Labels'][0]}\n\nText Detected:\n{info['Text'][0]}")
+    print(f"Filename:\n{info['Image'][0]}\n\nLabels detected:\n{info['Labels'][0]}\n\nText Detected:\n{info['Text'][0]}")
 
 
 if __name__ == "__main__":
