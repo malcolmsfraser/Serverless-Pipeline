@@ -68,6 +68,7 @@ IAM Role: Select your created IAM Role
 
 ##### Copy function from this repo into your lambda
 ```{bash}
+cd ~/environment
 cp -r Serverless-Pipeline/producer/* {your-producer-name}/{your-producer-name}/
 ```
 ##### Install lambda dependencies
@@ -88,6 +89,7 @@ IAM Role: Select your created IAM Role
 
 ##### Copy function from this repo into your lambda
 ```{bash}
+cd ~/environment
 cp -r Serverless-Pipeline/labeler/* {your-labeber-name}/{your-labeber-name}/
 ```
 ##### Install lambda dependencies
@@ -113,12 +115,13 @@ The pipeline setup is now complete!
 ## Using the command-line interface
 To use the command line tool copy the file from this repo into your Cloud9 main environment
 ```{bash}
-cd Serverless-Pipeline
+cd ~/environment/Serverless-Pipeline
 cp visionCLI.py ..
 ```
 
 Test with any image file (I've provided one called billboard.jpg)
 ```{bash}
+cd ~/environment
 python visionCLI --file billboard.jpg --bucket unprocessed-bucket
 ```
 
