@@ -25,7 +25,7 @@ Labeler lambda function that calls AWS Rekognition on the queued files
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/pipeline%20diagram.png)
 
 ## Setup
-Follow these instructions to set up the pipeline on your own
+Follow these instructions to set up this pipeline on your own
 
 ### Create an IAM Role
 Navigate to the IAM home page and select "Roles"
