@@ -50,7 +50,8 @@ Name: producer
 Navigate to the S3 home page and create a new bucket
 
 Name: unprocessed-bucket
-region: us-east-1
+
+Region: us-east-1
 
 **Note: if you use another name or region you will need to update the name in the Producer lambda & Labeler lambda source code**
 
