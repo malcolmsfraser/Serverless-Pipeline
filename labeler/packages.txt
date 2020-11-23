@@ -1,5 +1,3 @@
 boto3
 python-json-logger
-json
 pandas
-io
