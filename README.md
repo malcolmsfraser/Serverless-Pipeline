@@ -30,6 +30,12 @@ Labeler lambda function that calls AWS Rekognition on the queued files
 ### Setting up the serverless functions with AWS Lambda
 
 #### Step 1: Create an AWS Cloud9 Environment
+create and source a virtual environment
+```{bash}
+python3 -m venv ~/.pipeline
+source ~/.pipeline/bin/activate
+```
+#### Step 2: Clone this repo
 
 #### Step 2: Producer Lambda Initialize an new Lambda Function
 Name your lambda whatever you want
