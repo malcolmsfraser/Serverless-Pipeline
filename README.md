@@ -50,7 +50,8 @@ cd Serverless-Pipeline
 make install
 ```
 
-#### Step 3: Producer Lambda - Initialize an new Lambda Function
+#### Step 3: Producer Lambda
+##### Initialize an new Lambda Function
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/Lambda1.png)
 
 Name your lambda whatever you want
@@ -94,11 +95,11 @@ make all
 Deploy your lambda functions from AWS Cloud9
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/LambdaDeploy.png)
 
-From the AWS Lambda console, setup triggers
+From the AWS Lambda console, select the appropriate lambda function and setup triggers
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/Lambda2.png)
 
 For the producer lambda setup an S3 trigger
-![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaLabTrigger.png)
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaProdTrigger.png)
 
 For the labeler lambda setup an SQS trigger
-![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaProdTrigger.png)
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaLabTrigger.png)
