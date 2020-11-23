@@ -107,16 +107,17 @@ For the producer lambda setup an S3 trigger
 For the labeler lambda setup an SQS trigger
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaLabTrigger.png)
 
-##### Try it for yourself!
-The pipeline is now setup.
-To use the command line tool copy the file from the repo into your Cloud9 main environment
+The pipeline setup is now complete!
+
+## Using the command-line interface
+To use the command line tool copy the file from this repo into your Cloud9 main environment
 ```{bash}
 cd Serverless-Pipeline
 cp visionCLI.py ..
 ```
+
 Test with any image file (I've provided one called billboard.jpg)
 ```{bash}
 python visionCLI --file billboard.jpg --bucket unprocessed-bucket
 ```
 
-```
