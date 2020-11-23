@@ -47,8 +47,9 @@ python3 -m venv ~/.pipeline
 source ~/.pipeline/bin/activate
 ```
 #### Step 2: Clone this repo
-enter the repo and install dependencies
+Clone repo and install dependencies
 ```{bash}
+git clone https://github.com/malcolmsfraser/Serverless-Pipeline.git
 cd Serverless-Pipeline
 make install
 ```
