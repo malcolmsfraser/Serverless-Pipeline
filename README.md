@@ -23,9 +23,17 @@ Labeler lambda function that calls AWS Rekognition on the queued files
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/pipeline%20diagram.png)
 
 ## Setup
+Follow these instructions to set this up on your own
 
 ### Create an IAM Role
 
+### Create an SQS Queue
+**if you use another name you will need to update the name in the Producer lambda source code**
+Name: producer
+
+### Create an S3 Bucket
+**if you use another name you will need to update the name in the Producer lambda & Labeler lambda source code**
+Name:unprocessed-bucket
 
 ### Setting up the serverless functions with AWS Lambda
 
@@ -36,8 +44,15 @@ python3 -m venv ~/.pipeline
 source ~/.pipeline/bin/activate
 ```
 #### Step 2: Clone this repo
+enter the repo and install dependencies
+```{bash}
+cd Serverless-Pipeline
+make install
+```
 
-#### Step 2: Producer Lambda Initialize an new Lambda Function
+#### Step 3: Producer Lambda - Initialize an new Lambda Function
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/Lambda1.png)
+
 Name your lambda whatever you want
 
 Runtime: Python 3.6
@@ -45,3 +60,45 @@ Runtime: Python 3.6
 Function Trigger: None
 
 IAM Role: Select your created IAM Role
+
+##### Copy function from this repo into your lambda
+```{bash}
+cp -r Serverless-Pipeline/producer/* {your-producer-name}/{your-producer-name}/
+```
+##### Install lambda dependencies
+```{bash}
+cd {your-producer-name}/{your-producer-name}
+make all
+```
+
+#### Step 4: Labeler Lambda
+##### Initialize an new Lambda Function
+Name your lambda whatever you want
+
+Runtime: Python 3.6
+
+Function Trigger: None
+
+IAM Role: Select your created IAM Role
+
+##### Copy function from this repo into your lambda
+```{bash}
+cp -r Serverless-Pipeline/labeler/* {your-labeber-name}/{your-labeber-name}/
+```
+##### Install lambda dependencies
+```{bash}
+cd {your-labeler-name}/{your-labeler-name}
+make all
+```
+#### Step 5: Deploying & Trigger Setup
+Deploy your lambda functions from AWS Cloud9
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/LambdaDeploy.png)
+
+From the AWS Lambda console, setup triggers
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/Lambda2.png)
+
+For the producer lambda setup an S3 trigger
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaLabTrigger.png)
+
+For the labeler lambda setup an SQS trigger
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaProdTrigger.png)
