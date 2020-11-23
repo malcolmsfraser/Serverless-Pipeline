@@ -85,12 +85,12 @@ Function Trigger: None
 
 IAM Role: Select your created IAM Role
 
-##### Copy function from this repo into your lambda
+##### Copy contents from this repo's producer folder into your lambda folder
 ```{bash}
 cd ~/environment
 cp -r Serverless-Pipeline/producer/* {your-producer-name}/{your-producer-name}/
 ```
-##### Install lambda dependencies
+##### Install producer lambda dependencies
 ```{bash}
 cd {your-producer-name}/{your-producer-name}
 make all
@@ -106,12 +106,12 @@ Function Trigger: None
 
 IAM Role: Select your created IAM Role
 
-##### Copy function from this repo into your lambda
+##### Copy contents from this repo's labeler folder into your lambda folder
 ```{bash}
 cd ~/environment
 cp -r Serverless-Pipeline/labeler/* {your-labeber-name}/{your-labeber-name}/
 ```
-##### Install lambda dependencies
+##### Install labeler lambda dependencies
 ```{bash}
 cd {your-labeler-name}/{your-labeler-name}
 make all
@@ -129,7 +129,7 @@ Trigger should be listening to the S3 bucket you created earlier
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaProdTrigger.png)
 
 #### For the labeler lambda setup an SQS trigger
-Trigger should be listening to the SQS trigger you created earlier
+Trigger should be listening to the SQS queue you created earlier
 
 ![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/lambdaLabTrigger.png)
 
