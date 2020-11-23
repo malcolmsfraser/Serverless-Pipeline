@@ -26,20 +26,32 @@ Labeler lambda function that calls AWS Rekognition on the queued files
 Follow these instructions to set this up on your own
 
 ### Create an IAM Role
+Navigate to the IAM home page and select "Roles"
+
+Create a new role for Lambda
+
+On the permissions page select the following access policies:
+
+![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/IamRoles.png)
+
+Create role (remember the name for later)
 
 ### Create an SQS Queue
-**Note: if you use another name you will need to update the name in the Producer lambda source code**
+Navigate to the SQS home page and create a new queue
 
 Name: producer
 
+**Note: if you use another name you will need to update the name in the Producer lambda source code**
+
 ### Create an S3 Bucket
-**Note: if you use another name or region you will need to update the name in the Producer lambda & Labeler lambda source code**
+Navigate to the S3 home page and create a new bucket
 
 Name: unprocessed-bucket
 region: us-east-1
 
-### Setting up the serverless functions with AWS Lambda
+**Note: if you use another name or region you will need to update the name in the Producer lambda & Labeler lambda source code**
 
+### Setting up the serverless functions with AWS Lambda
 #### Step 1: Create an AWS Cloud9 Environment
 create and source a virtual environment
 ```{bash}
