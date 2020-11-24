@@ -1,6 +1,7 @@
 # Serverless Computer Vision Pipeline
 #### Demo Video
-[![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/706Thumbnail.png)](https://youtu.be/5UWxFUAvRuQ)
+[![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/706Thumbnail.jpg)](https://youtu.be/5UWxFUAvRuQ)
+
 ## Introduction
 
 This project demos how to create an infinitely scalable serverless data engineering pipeline. While this specific pipeline performs computer vision, the concepts shown can easily be extended to other tasks like natural language processing or involve the use of any other pretrained models.
