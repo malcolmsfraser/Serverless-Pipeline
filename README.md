@@ -1,5 +1,5 @@
 # Serverless Computer Vision Pipeline
-[![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/706Thumbnail.jpg)](https://youtu.be/giX42r4S1mw)
+[![Demo Video](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/706Thumbnail.jpg)](https://youtu.be/giX42r4S1mw)
 
 ## Introduction
 
