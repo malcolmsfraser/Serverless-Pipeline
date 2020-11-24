@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This project outlines all how to to create an infinitely scalable serverless data engineering pipeline. While this specific example performs computer vision, the concepts shown can easily be extended to other tasks like natural language processing or involve the use of any other pretrained models.
+This project demos how to to create an infinitely scalable serverless data engineering pipeline. While this specific example performs computer vision, the concepts shown can easily be extended to other tasks like natural language processing or involve the use of any other pretrained models.
 
 The serverless pipeline listens to an S3 bucket for an image upload. Upon image upload the producer lamba function sends the name(s) of any uploaded file(s) to an SQS queue. The essentially infinite storage capacity of AWS S3 combined with the ability for AWS SQS to handle infinately large inputs is what allows this pipeline to scale from just a single upload to multiple files. Once in SQS, the labler lambda function in triggered which sends the files S3 location to AWS Rekognition which performs entity and text detection. The output response from Rekognition is then stored as a csv in the results folder of the same S3 bucket.
 
