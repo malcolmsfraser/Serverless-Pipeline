@@ -1,5 +1,5 @@
 # Serverless Computer Vision Pipeline
-#### Demo Video
+#### Demo video
 [![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/706Thumbnail.jpg)](https://youtu.be/5UWxFUAvRuQ)
 
 ## Introduction
