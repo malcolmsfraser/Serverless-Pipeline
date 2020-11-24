@@ -12,15 +12,15 @@ The included command-line tool allows you up upload a local file directly from y
 https://youtu.be/5UWxFUAvRuQ
 ## Components
 
-IAM Role that allows access to all services
+**IAM Role** that allows access to all services
 
-S3 bucket which will store the target files and the results 
+**S3 bucket** which will store the target files and the results 
 
-Producer lambda function that sends newly uploaded filenames to SQS
+**Producer** lambda function that sends newly uploaded filenames to SQS
 
-Simple Queue Service (SQS) queue which queues the files for processing
+**Simple Queue Service (SQS)** queue which queues the files for processing
 
-Labeler lambda function that calls AWS Rekognition on the queued files
+**Labeler** lambda function that calls AWS Rekognition on the queued files
 
 
 ## Design
