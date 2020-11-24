@@ -9,7 +9,7 @@ This project demos how to create an infinitely scalable serverless data engineer
 The serverless pipeline listens to an S3 bucket for an image upload. Upon image upload the producer lamba function sends the name(s) of any uploaded file(s) to an SQS queue. The essentially infinite storage capacity of AWS S3 combined with the ability for AWS SQS to handle infinately large inputs is what allows this pipeline to scale from just a single upload to multiple files. Once in SQS, the labler lambda function in triggered which sends the files S3 location to AWS Rekognition which performs entity and text detection. The output response from Rekognition is then stored as a csv in the results folder of the same S3 bucket.
 
 The included command-line tool allows you up upload a local file directly from your command-line and returns the computer vision results.
-https://youtu.be/5UWxFUAvRuQ
+
 ## Components
 
 **IAM Role** that allows access to all services
