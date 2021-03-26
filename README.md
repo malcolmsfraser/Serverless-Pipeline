@@ -1,4 +1,5 @@
 # Serverless Computer Vision Pipeline
+### [THIS TUTORIAL IS OUTDATED AS AWS HAS UPDATED]
 #### Demo video
 [![alt text](https://github.com/malcolmsfraser/Serverless-Pipeline/blob/main/Images/706Thumbnail.jpg)](https://youtu.be/5UWxFUAvRuQ)
 
